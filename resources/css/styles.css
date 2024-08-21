@@ -1,0 +1,455 @@
+/* Universal Styles */
+html {
+    font-family: "Roboto", sans-serif ;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #F8EDE3;
+}
+
+/* Navigation */
+.bar {
+    /* Flex container for the logo and navigation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #C5705D;
+    height: 2.5rem;
+    width: 100%;
+}
+
+.logo {
+    /* Logo styling */
+    height: 2rem;
+    width: auto;
+    margin-right: 1rem;
+}
+
+.desktop ul {
+    /* Unordered list styling */
+    color: #F8EDE3;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    
+}
+
+.desktop {
+    display: flex;
+}
+
+.desktop li {
+    /* List items in the desktop navigation */
+    margin: 0 1rem;
+}
+
+.desktop a {
+    /* Links in the desktop navigation */
+    color: #F8EDE3;
+    text-decoration: none;
+}
+
+.desktop a:hover {
+    text-decoration: underline;
+}
+
+.mobile {
+    display: none;
+}
+
+/* Mobile View */
+@media screen and (max-width: 480px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex; /* Show the mobile navigation on small screens */
+        justify-content: space-between; /* Space the icons evenly across the bar */
+        align-items: center; /* Align icons vertically */
+        padding-right: 0.5rem;
+    }
+
+    .mobile ul {
+        display: flex;
+        justify-content: space-around; /* Space around each list item */
+        align-items: center; /* Center items vertically */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%; /* Ensure full width */
+    }
+
+    .mobile li {
+        flex-grow: 1; /* Allow list items to grow and take equal space */
+        display: flex; /* Flex container for the anchor inside */
+        justify-content: space-between; /* Center the anchor within the list item */
+        align-items: center; /* Center the anchor vertically */
+        margin-left: 2rem;
+    }
+
+    .mobile a {
+        display: block;
+        padding: 0.5rem 0; /* Padding for better click area */
+        width: 100%; /* Full width to fill the list item */
+        text-align: center; /* Center the icon inside the link */
+    }
+
+    .mobile a img {
+        height: 2rem; /* Set a fixed height for icons */
+        width: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure the image is block-level */
+        margin: 0 auto; /* Center the image horizontally */
+    }
+
+    .banner {
+        height: auto;
+        max-height: none;
+        background-size: cover;
+    }
+
+    .mission {
+        max-width: 100%;           /* Full width for mobile screens */
+        padding: 1rem;             /* Reduce padding to fit mobile screen */
+    }
+
+    .mission h2 {
+        font-size: 2rem;           /* Reduce heading size for mobile */
+        margin-bottom: 1rem;       /* Adjust spacing below heading */
+    }
+
+    .mission p {
+        font-size: 1rem;           /* Smaller paragraph font size for mobile */
+        line-height: 1.5rem;       /* Adjust line height for better readability on small screens */
+        text-align: justify;
+    }
+
+    .photos {
+        height: auto; /* Allow the height to adjust based on content */
+        width: 100%; /* Make the slideshow container full width */
+        padding: 0; /* Remove any padding to ensure full width */
+        margin: 0; /* Remove margin to prevent any unwanted space around the container */
+        max-width: 100%; /* Ensure it fills the width of the viewport */
+    }
+
+    .photo-item img {
+        width: 100%; /* Make sure the image takes the full width of its container */
+        height: auto; /* Let the height scale automatically */
+        object-fit: cover; /* Ensure the image covers the entire container, might crop slightly */
+    }
+
+    figcaption {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    #alimentation-section {
+        padding: 20px 10px; /* Reduce padding on mobile devices */
+    }
+
+    #alimentation-section h2 {
+        font-size: 1.5rem; /* Smaller font size for headings */
+    }
+
+    #alimentation-section h3 {
+        font-size: 1rem; /* Adjust subheading font size */
+    }
+
+    .images-container {
+        flex-direction: column; /* Stack images vertically on small screens */
+        align-items: center; /* Center the images */
+    }
+
+    .image-container {
+        min-width: 100%; /* Make the images take up full width */
+        max-width: 100%;
+    }
+
+    .image-container img {
+        border-radius: 5px; /* Slightly reduce the border radius on small screens */
+    }
+
+    #quotes-section .content {
+        padding: 2rem; /* Reduce padding for smaller screens */
+    }
+    
+    #quotes-section .quote {
+        padding-right: 1rem; /* Adjust padding */
+        font-size: 1rem; /* Reduce font size */
+        line-height: 1.3; /* Slightly increase line height for readability */
+    }
+    
+    #quotes-section .quote-citation {
+        height: 1.5rem; /* Adjust height to match the smaller font size */
+    }
+
+    footer .content {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center the text */
+    }
+
+    footer .content span {
+        font-size: 0.875rem; /* Slightly reduce font size */
+        margin-bottom: 10px; /* Add space between elements */
+    }
+
+    footer .content .social-media {
+        justify-content: center; /* Center the social media icons */
+    }
+
+    footer .content .social-media a {
+        font-size: 1rem; /* Slightly reduce icon size */
+    }
+
+}
+/* Mision Section */
+.banner {
+    /* Mission section banner styling */
+    background-image: url('../images/backgrounds/01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 650px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: #F8EDE3;
+    text-align: center;
+    position: relative;
+}
+
+.mission {
+    /* Mission text container */
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 0;
+}
+
+.mission h2 {
+    /* Mission section heading */
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.mission p {
+    /* Mission section paragraph */
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+/* Perros Section */
+.photos {
+    position: relative; /* Ensure it stays in the normal document flow */
+    width: calc(100% - 300px); /* Adjusted width to leave 60px on each side */
+    margin: 20px auto 0 auto; /* Add top margin to create space beneath mission content */
+    height: 400px; /* Ensure the container has a fixed height */
+    border: none; /* Add a border to create the box-like appearance */
+    border-radius: 0; /* Optional: rounded corners */
+    box-shadow: none; /* Add a subtle shadow for depth */
+    background-color: transparent;
+    z-index: 1; /* Ensure it doesn't overlap content above */
+}
+
+.photo-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 1s ease-in-out;
+}
+
+.photo-item.active {
+    opacity: 1; /* Show the active photo */
+}
+
+.photo-item figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Ensure the image fills the container */
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px; /* Optional: rounded corners for images */
+}
+
+.photo-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: transparent; /* Semi-transparent background for caption */
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    border-bottom-left-radius: 10px; /* Match image corners */
+    border-bottom-right-radius: 10px; /* Match image corners */
+}
+
+/* Slideshow animation */
+@keyframes slideshow {
+    0% {
+        opacity: 1;
+    }
+    12.5% {
+        opacity: 1;
+    }
+    14.29% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.photo-item:nth-child(1) {
+    animation: slideshow 35s infinite;
+    animation-delay: 0s;
+}
+
+.photo-item:nth-child(2) {
+    animation: slideshow 35s infinite;
+    animation-delay: 5s;
+}
+
+.photo-item:nth-child(3) {
+    animation: slideshow 35s infinite;
+    animation-delay: 10s;
+}
+
+.photo-item:nth-child(4) {
+    animation: slideshow 35s infinite;
+    animation-delay: 15s;
+}
+
+.photo-item:nth-child(5) {
+    animation: slideshow 35s infinite;
+    animation-delay: 20s;
+}
+
+.photo-item:nth-child(6) {
+    animation: slideshow 35s infinite;
+    animation-delay: 25s;
+}
+
+.photo-item:nth-child(7) {
+    animation: slideshow 35s infinite;
+    animation-delay: 30s;
+}
+
+/* Alimentacion Section */
+#alimentation-section {
+    background-color: #3E3E3E; /* Set the background color */
+    padding: 40px 20px; /* Add padding to the section */
+    text-align: center; /* Center the text inside the section */
+    color: #ffffff; /* Set text color to white */
+}
+
+#alimentation-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#alimentation-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 40px; /* Add spacing below the h3 */
+    text-align: center;
+}
+
+.images-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between images */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Add space between images */
+}
+
+.image-container {
+    flex: 1;
+    min-width: 200px; /* Ensure the images don't get too small */
+    max-width: 300px; /* Limit the max size of images */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: add rounded corners to images */
+}
+
+/* Quote Section */
+#quotes-section .content {
+  padding: 5rem;
+  text-align: center;
+}
+
+#quotes-section .quote {
+  padding-right: 1.875rem;
+  font-family: "Palatino", serif;
+  font-size: 1.875rem;
+  line-height: 1.1;
+  font-style: italic;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+#quotes-section .quote-citation {
+    height: 1.875rem;
+  }
+
+/* Footer Section */
+footer {
+    background-color: #3E3E3E; /* Dark background for the footer */
+    color: #ffffff; /* White text color */
+    padding: 20px 0; /* Padding at the top and bottom */
+    text-align: center; /* Center the text */
+    font-family: "Arial", sans-serif; /* Font choice for the footer */
+}
+
+footer .content {
+    max-width: 1200px; /* Max width to center content on large screens */
+    margin: 0 auto; /* Center content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Side padding */
+}
+
+footer .content span {
+    font-size: 1rem; /* Base font size */
+    line-height: 1.5; /* Line height for readability */
+}
+
+footer .content .location {
+    font-style: italic; /* Italicize location text */
+}
+
+footer .content .social-media {
+    display: flex;
+    gap: 10px; /* Space between social media icons */
+}
+
+footer .content .social-media a {
+    color: #ffffff; /* White color for social media icons */
+    font-size: 1.2rem; /* Adjust size of icons */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer .content .social-media a:hover {
+    color: #C5705D; /* Change color on hover */
+}
+
